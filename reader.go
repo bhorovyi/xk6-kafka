@@ -52,7 +52,7 @@ type ReaderConfig struct {
 	GroupID                string        `json:"groupId"`
 	Topic                  string        `json:"topic"`
 	IsolationLevel         string        `json:"isolationLevel"`
-	StartOffset            string        `json:"startOffset"`
+	StartOffset            int           `json:"startOffset"`
 	Offset                 int64         `json:"offset"`
 	Brokers                []string      `json:"brokers"`
 	GroupTopics            []string      `json:"groupTopics"`
