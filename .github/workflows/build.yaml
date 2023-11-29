@@ -26,11 +26,11 @@ jobs:
         run: |
           mkdir dist
           go install go.k6.io/xk6/cmd/xk6@latest
-          GOOS=linux GOARCH=amd64 xk6 build --output dist/xk6-kafka_${{ github.ref_name }}_linux_amd64 --with github.com/mostafa/xk6-kafka@${{ github.ref_name }}
+          GOOS=linux GOARCH=amd64 xk6 build --output dist/xk6-kafka_${{ github.ref_name }}_linux_amd64 --with github.com/bhorovyi/xk6-kafka@${{ github.ref_name }}
           tar cvzf dist/xk6-kafka_${{ github.ref_name }}_linux_amd64.tar.gz dist/xk6-kafka_${{ github.ref_name }}_linux_amd64
-          GOOS=darwin GOARCH=amd64 xk6 build --output dist/xk6-kafka_${{ github.ref_name }}_darwin_amd64 --with github.com/mostafa/xk6-kafka@${{ github.ref_name }}
+          GOOS=darwin GOARCH=amd64 xk6 build --output dist/xk6-kafka_${{ github.ref_name }}_darwin_amd64 --with github.com/bhorovyi/xk6-kafka@${{ github.ref_name }}
           tar cvzf dist/xk6-kafka_${{ github.ref_name }}_darwin_amd64.tar.gz dist/xk6-kafka_${{ github.ref_name }}_darwin_amd64
-          GOOS=windows GOARCH=amd64 xk6 build --output dist/xk6-kafka_${{ github.ref_name }}_windows_amd64.exe --with github.com/mostafa/xk6-kafka@${{ github.ref_name }}
+          GOOS=windows GOARCH=amd64 xk6 build --output dist/xk6-kafka_${{ github.ref_name }}_windows_amd64.exe --with github.com/bhorovyi/xk6-kafka@${{ github.ref_name }}
           tar cvzf dist/xk6-kafka_${{ github.ref_name }}_windows_amd64.tar.gz dist/xk6-kafka_${{ github.ref_name }}_windows_amd64.exe
 
       - name: Generate CycloneDX SBOM artifacts 📃
